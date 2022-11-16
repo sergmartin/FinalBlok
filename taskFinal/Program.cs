@@ -6,22 +6,22 @@ Console.Clear();
 Console.WriteLine("введите пять слов или чего- то, но 5: ");
 
 string[] mass1 = new string[5];   //  создаем массив, который задан пользователем
-
+string[] mass2 = new string[mass1.Length];
 for (int i = 0; i < mass1.Length; i++)
 {
     mass1[i] = Convert.ToString(Console.ReadLine());
 }
 
 
-string[] mass2 = new string[mass1.Length];
-void Massiv(string[] mass1, string[] mass2)
+
+void Massiv(string[] arr1, string[] arr2)
 {
     int count = 0;
     for (int i = 0; i < mass1.Length; i++)
     {
-    if(mass1[i].Length <= 3)
+    if(arr1[i].Length <= 3)
         {
-        mass2[count] = mass1[i];
+        arr2[count] = arr1[i];
         count++;
         }
     }
