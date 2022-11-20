@@ -6,12 +6,14 @@ Console.Clear();
 Console.WriteLine("введите пять слов или чего- то, но 5: ");
 
 string[] mass1 = new string[5];   //  создаем массив, который задан пользователем
-string[] mass2 = new string[mass1.Length];
+int n = 0;
+
 for (int i = 0; i < mass1.Length; i++)
 {
     mass1[i] = Convert.ToString(Console.ReadLine());
+    if(mass1[i].Length <= 3) n++;
 }
-
+string[] mass2 = new string[n];
 
 
 void Massiv(string[] arr1, string[] arr2)
